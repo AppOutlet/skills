@@ -96,7 +96,7 @@ Silently fix the draft before showing it:
 Only after explicit approval:
 
 1. Slugify the title: lowercase, replace consecutive non-alphanumeric chars with `_`, trim `_`. Example: `Fix image parsing crash` -> `fix_image_parsing_crash`.
-2. Use a temp issue-body directory outside the repo: `/tmp/opencode-ticket-issues` on macOS/Linux, `%TEMP%\opencode-ticket-issues` on Windows. Create it if needed. Do not use `.opencode/issues/`.
+2. Use a temp issue-body directory in a temporary folder outside the repo. Create it if needed.
 3. Generate a local timestamp in `YYYYMMDDHHMMSS` format.
 4. Save the approved body as `<temp-dir>/<timestamp>-<slug>.md`. File content is raw Markdown only, without code-fence delimiters.
 5. Run `gh issue create --title "..." --body-file <temp-dir>/<timestamp>-<slug>.md` and capture the printed URL.
