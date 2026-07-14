@@ -8,9 +8,9 @@
 
 ### Acceptance criteria
 
-- [ ] GIVEN [initial context]
-      WHEN [user action or triggering event]
-      THEN [expected outcome]
-- [ ] GIVEN [initial context]
-      WHEN [user action or triggering event]
-      THEN [expected outcome]
+- [ ] **GIVEN** [initial context] \
+      **WHEN** [user action or triggering event] \
+      **THEN** [expected outcome]
+- [ ] **GIVEN** [initial context] \
+      **WHEN** [user action or triggering event] \
+      **THEN** [expected outcome]

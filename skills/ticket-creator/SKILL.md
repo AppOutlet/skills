@@ -45,7 +45,7 @@ Never skip duplicate check, codebase investigation, self-review, or explicit app
 - `bug`: broken behavior, regression, crash, incorrect result, inconsistency.
 - `task`: maintenance, cleanup, upgrade, migration, docs, routine implementation.
 - `spike`: investigation, research, unknown scope. Title starts with `Spike: `.
-- `feature`: new user-facing or system-facing capability. Acceptance criteria use `GIVEN` / `WHEN` / `THEN` checklist items.
+- `feature`: new user-facing or system-facing capability. Acceptance criteria use `GIVEN` / `WHEN` / `THEN` checklist items, with those words stacked vertically so `GIVEN`, `WHEN`, and `THEN` appear directly below each other for easier scanning.
 
 ## Sentry Context
 
@@ -79,6 +79,7 @@ Before drafting, search/read relevant files, modules, screens, endpoints, config
 - `task`: acceptance criteria describe observable outcomes, not vague activity.
 - `spike`: `### Current Knowledge` captures investigation findings.
 - `feature`: description covers problem, user benefit, technical/design context, and edge cases.
+- `feature`: in each acceptance-criteria checklist item, keep `GIVEN`, `WHEN`, and `THEN` on separate lines and vertically aligned; do not collapse them into a single paragraph or sentence.
 
 ## Self-Review
 
