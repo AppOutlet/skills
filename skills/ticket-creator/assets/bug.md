@@ -17,4 +17,4 @@
 - Priority: [High/Medium/Low]
 - Related Files: [Relevant files, modules, or components found during investigation]
 - Workaround: [If available]
-- Sentry ticket: [If available]
+- [Sentry ticket or issue link, if available]

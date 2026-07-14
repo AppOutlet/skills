@@ -74,6 +74,7 @@ Before drafting, search/read relevant files, modules, screens, endpoints, config
 - Do not create the issue before approval.
 - Do not include the ticket title anywhere in the body.
 - Use the selected template exactly; remove optional sections only when useless.
+- Treat placeholder text like `[If available]`, `[Optional ...]`, and similar cues as removal instructions, not literal output. If the underlying data does not exist, omit that line or section entirely instead of emitting a placeholder such as `Sentry link: [If available]`.
 - Treat template formatting as part of the template: preserve heading levels, blank lines, bold text, checklist markers, indentation, and any intentional alignment or line breaks. Do not reflow or restyle the template.
 - Keep titles concise and outcome-oriented.
 - `bug`: include concrete repro, expected/actual behavior, and technical findings.

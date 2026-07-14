@@ -1,6 +1,5 @@
 ## Description
-Sentry ticket: [If available]
-[Description of the spike]
+[Description of the spike. If there is a relevant Sentry ticket, mention it here.]
 
 ### Background
 [Why this investigation is needed]

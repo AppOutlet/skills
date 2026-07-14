@@ -1,12 +1,11 @@
 ## Description
 [High-level summary of what needs to be done and why it matters]
 
-- Scope and constraints
+#### Scope and constraints
   - [Notable in-scope or out-of-scope items, deadlines, dependencies, or constraints]
 
-- References
-  - [Links to specs, docs, or related issues. Remove this subsection if none]
-  - Sentry link: [If available]
+#### References
+  - [Links to specs, docs, related issues, or a Sentry link. Remove this subsection if none]
   
 #### Scope
 [Whats the scope and what is out of scope]
