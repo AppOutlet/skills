@@ -29,7 +29,7 @@ Do not draft or create a ticket until `gh` is available.
 3. Infer ticket type: `bug`, `task`, `spike`, or `feature`. Ask one concise question if ambiguous.
 4. Search existing GitHub issues for duplicates.
 5. Investigate relevant code/files/config locally before drafting.
-6. Open only the chosen template and preserve its heading structure:
+6. Open only the chosen template and preserve its heading structure and formatting (Bold, checklist, indentation, line breaks, etc.):
    - Bug: `assets/bug.md`
    - Task: `assets/task.md`
    - Spike: `assets/spike.md`
@@ -74,6 +74,7 @@ Before drafting, search/read relevant files, modules, screens, endpoints, config
 - Do not create the issue before approval.
 - Do not include the ticket title anywhere in the body.
 - Use the selected template exactly; remove optional sections only when useless.
+- Treat template formatting as part of the template: preserve heading levels, blank lines, bold text, checklist markers, indentation, and any intentional alignment or line breaks. Do not reflow or restyle the template.
 - Keep titles concise and outcome-oriented.
 - `bug`: include concrete repro, expected/actual behavior, and technical findings.
 - `task`: acceptance criteria describe observable outcomes, not vague activity.
