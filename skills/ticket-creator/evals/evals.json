@@ -24,6 +24,7 @@
         "The draft identifies the request as a task ticket and uses the task template structure with Description, Scope and constraints, Acceptance criteria, and optional Additional information.",
         "The response references gradle/libs.versions.toml as part of the codebase investigation.",
         "The acceptance criteria are outcome-oriented checklist items instead of vague implementation activity.",
+        "Each acceptance-criteria checklist item starts with a sequential ACn: label (AC1:, AC2:, ...).",
         "The response stops in draft/approval mode and does not create the issue yet.",
         "The draft strictly follows the rule of NOT repeating the ticket title as a heading or text inside the issue body description.",
         "When the issue is created (or when writing the body file), the body file content must NOT start with a code fence delimiter (```). The file written to .opencode/issues/<slug>.md must contain raw markdown, not a code-fenced block."
@@ -51,6 +52,7 @@
       "expectations": [
         "The draft identifies the request as a feature ticket and uses the feature template structure with Description and Acceptance criteria.",
         "The acceptance criteria are checklist items written in GIVEN / WHEN / THEN form.",
+        "Each acceptance-criteria checklist item starts with a sequential ACn: label (AC1:, AC2:, ...).",
         "The response references notifications flow details such as NotificationsScreen, NotificationsViewModel, NotificationsViewDataMapper, selectedSites, or hasUnreadNotifications.",
         "The response stops in draft/approval mode and does not create the issue yet.",
         "The draft strictly follows the rule of NOT repeating the ticket title as a heading or text inside the issue body description.",
@@ -80,6 +82,7 @@
         "The response includes an improved version of the ticket inside a fenced markdown code block.",
         "The response explains why each issue matters, not just what is wrong.",
         "The improved ticket replaces weasel words (like 'properly', 'everything', 'works') with concrete, verifiable criteria.",
+        "Each acceptance-criteria checklist item in the improved ticket starts with a sequential ACn: label (AC1:, AC2:, ...).",
         "The improved ticket adds missing context such as steps to reproduce, expected vs actual behavior, or scope boundaries."
       ]
     },

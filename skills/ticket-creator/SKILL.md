@@ -46,6 +46,7 @@ Never skip duplicate check, codebase investigation, self-review, or explicit app
 - `task`: maintenance, cleanup, upgrade, migration, docs, routine implementation.
 - `spike`: investigation, research, unknown scope. Title starts with `Spike: `.
 - `feature`: new user-facing or system-facing capability. Acceptance criteria use `GIVEN` / `WHEN` / `THEN` checklist items, with those words stacked vertically so `GIVEN`, `WHEN`, and `THEN` appear directly below each other for easier scanning.
+- `task` and `feature`: each acceptance-criteria checklist item starts with a sequential `AC1:` / `AC2:` / ... label (e.g. `- [ ] AC1: ...`) so criteria can be referenced by number during refinement. Keep labels stable; renumber only when criteria are added or removed.
 
 ## Sentry Context
 
@@ -79,6 +80,7 @@ Before drafting, search/read relevant files, modules, screens, endpoints, config
 - Keep titles concise and outcome-oriented.
 - `bug`: include concrete repro, expected/actual behavior, and technical findings.
 - `task`: acceptance criteria describe observable outcomes, not vague activity.
+- `task` and `feature`: each acceptance-criteria checklist item must start with a sequential `AC1:` / `AC2:` / ... label so criteria can be referenced by number during refinement.
 - `spike`: `### Current Knowledge` captures investigation findings.
 - `feature`: description covers problem, user benefit, technical/design context, and edge cases.
 - `feature`: in each acceptance-criteria checklist item, keep `GIVEN`, `WHEN`, and `THEN` on separate lines and vertically aligned; do not collapse them into a single paragraph or sentence.
@@ -90,6 +92,7 @@ Silently fix the draft before showing it:
 - Title states the outcome without opening the issue.
 - Description explains why, scope, and context for someone new.
 - Acceptance criteria are concrete and QA-verifiable.
+- Every acceptance criterion starts with a sequential `ACn:` label (`AC1:`, `AC2:`, ...).
 - Remove vague terms like "properly", "correctly", and "as expected".
 - Surface hidden scope/dependencies such as APIs, migrations, or platform coverage.
 - Consider error, empty, loading, permission, analytics, and compatibility cases.

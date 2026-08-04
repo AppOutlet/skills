@@ -8,9 +8,9 @@
 
 ### Acceptance criteria
 
-- [ ] **GIVEN** [initial context] \
+- [ ] AC1: **GIVEN** [initial context] \
       **WHEN** [user action or triggering event] \
       **THEN** [expected outcome]
-- [ ] **GIVEN** [initial context] \
+- [ ] AC2: **GIVEN** [initial context] \
       **WHEN** [user action or triggering event] \
       **THEN** [expected outcome]

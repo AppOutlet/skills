@@ -11,8 +11,8 @@
 [Whats the scope and what is out of scope]
 
 ## Acceptance criteria
-- [ ] [Outcome 1]
-- [ ] [Outcome 2]
+- [ ] AC1: [Outcome 1]
+- [ ] AC2: [Outcome 2]
 
 ## Additional information
 [Optional implementation notes or supporting context. Remove this section if none]
