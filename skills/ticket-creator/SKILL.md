@@ -46,7 +46,7 @@ Never skip duplicate check, codebase investigation, self-review, or explicit app
 - `task`: maintenance, cleanup, upgrade, migration, docs, routine implementation.
 - `spike`: investigation, research, unknown scope. Title starts with `Spike: `.
 - `feature`: new user-facing or system-facing capability. Acceptance criteria use `GIVEN` / `WHEN` / `THEN` checklist items, with those words stacked vertically so `GIVEN`, `WHEN`, and `THEN` appear directly below each other for easier scanning.
-- `task` and `feature`: each acceptance-criteria checklist item starts with a sequential `AC1:` / `AC2:` / ... label (e.g. `- [ ] AC1: ...`) so criteria can be referenced by number during refinement. Keep labels stable; renumber only when criteria are added or removed.
+- `task` and `feature`: each acceptance-criteria checklist item starts with a sequential `AC1:` / `AC2:` / ... label (e.g. `- [ ] AC1: ...`) so criteria can be referenced by number during draft review and refinement. Keep labels stable; renumber only when criteria are added or removed. Strip `ACn:` prefixes before creating the final issue.
 
 ## Sentry Context
 
@@ -80,7 +80,7 @@ Before drafting, search/read relevant files, modules, screens, endpoints, config
 - Keep titles concise and outcome-oriented.
 - `bug`: include concrete repro, expected/actual behavior, and technical findings.
 - `task`: acceptance criteria describe observable outcomes, not vague activity.
-- `task` and `feature`: each acceptance-criteria checklist item must start with a sequential `AC1:` / `AC2:` / ... label so criteria can be referenced by number during refinement.
+- `task` and `feature`: each acceptance-criteria checklist item must start with a sequential `AC1:` / `AC2:` / ... label so criteria can be referenced by number during draft review.
 - `spike`: `### Current Knowledge` captures investigation findings.
 - `feature`: description covers problem, user benefit, technical/design context, and edge cases.
 - `feature`: in each acceptance-criteria checklist item, keep `GIVEN`, `WHEN`, and `THEN` on separate lines and vertically aligned; do not collapse them into a single paragraph or sentence.
@@ -104,9 +104,10 @@ Only after explicit approval:
 1. Slugify the title: lowercase, replace consecutive non-alphanumeric chars with `_`, trim `_`. Example: `Fix image parsing crash` -> `fix_image_parsing_crash`.
 2. Use a temp issue-body directory in a temporary folder outside the repo. Create it if needed.
 3. Generate a local timestamp in `YYYYMMDDHHMMSS` format.
-4. Save the approved body as `<temp-dir>/<timestamp>-<slug>.md`. File content is raw Markdown only, without code-fence delimiters.
-5. Run `gh issue create --title "..." --body-file <temp-dir>/<timestamp>-<slug>.md` and capture the printed URL.
-6. Open the URL: `open <url>` on macOS, `xdg-open <url>` on Linux, `start <url>` on Windows.
+4. Strip `ACn:` prefixes from acceptance criteria lines (e.g. `- [ ] AC1: Outcome` -> `- [ ] Outcome`) so the final issue has no draft-only labels.
+5. Save the approved body as `<temp-dir>/<timestamp>-<slug>.md`. File content is raw Markdown only, without code-fence delimiters.
+6. Run `gh issue create --title "..." --body-file <temp-dir>/<timestamp>-<slug>.md` and capture the printed URL.
+7. Open the URL: `open <url>` on macOS, `xdg-open <url>` on Linux, `start <url>` on Windows.
 
 Never use inline `--body` for multiline content; use `--body-file` to avoid shell escaping bugs.
 
