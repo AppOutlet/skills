@@ -6,21 +6,13 @@ compatibility: Requires GitHub CLI (`gh`), network access to GitHub issues, and 
 
 # Ticket Creator
 
-Turn user requests into actionable GitHub issues through investigation, draft review, and explicit approval.
+Turn user requests into actionable GitHub issues through investigation, draft review, and explicit approval. Uses the gh cli to interact with GitHub issues.
 
 ## Modes
 
 - New ticket: follow the full workflow below.
 - Existing ticket review: use [Review Existing Ticket](#review-existing-ticket).
 - Feature planning or breakdown: use [Feature Breakdown](#feature-breakdown).
-
-## Preflight
-
-1. Run `gh --version` before ticket work.
-2. If missing, stop and tell the user to install GitHub CLI, e.g. `brew install gh`, `winget install GitHub.cli`, or <https://cli.github.com/>.
-3. If `gh` issue commands fail for auth, stop and ask the user to run `gh auth login`.
-
-Do not draft or create a ticket until `gh` is available.
 
 ## New Ticket Workflow
 
