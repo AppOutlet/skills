@@ -10,8 +10,8 @@
 ### Scope
 [What should be investigated and what is out of scope]
 
-## Outcomes
-- [ ] [Thing to learn, confirm, compare, or de-risk]
-- [ ] [Additional thing to learn, confirm, compare, or de-risk]
-- [ ] [Artifact to produce, such as notes, a document, a diagram, or an estimate]
+## Outcomes and Deliverables
+- [ ] [Question answered, risk reduced, or decision made by the spike]
+- [ ] [Additional question answered, risk reduced, or decision made]
+- [ ] [Artifact produced, such as notes, a diagram, an estimate, or a recommendation]
 - [ ] [Additional artifact if needed]

@@ -37,7 +37,7 @@
       "files": [],
       "expectations": [
         "The proposed title starts with `Spike: `.",
-        "The draft uses the spike template structure with Background, Current Knowledge, Scope, Outcomes, and Deliverables.",
+        "The draft uses the spike template structure with Background, Current Knowledge, Scope, and Outcomes and Deliverables.",
         "The response references modularisation.md together with current notification implementation files such as NotificationsScreen, NotificationsViewModel, NotificationsOrchestrator, or data/notification classes.",
         "The response stops in draft/approval mode and does not create the issue yet.",
         "The draft strictly follows the rule of NOT repeating the ticket title as a heading or text inside the issue body description.",
