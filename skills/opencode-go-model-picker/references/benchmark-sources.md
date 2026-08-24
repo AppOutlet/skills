@@ -1,59 +1,37 @@
 # Benchmark sources to check
 
-Not exhaustive — new leaderboards appear and old ones go stale, so treat this as a starting
-point for the web search in Step 2, not a checklist to satisfy mechanically.
+Not exhaustive — treat as a starting point for the Step 2 web search.
 
 ## General coding
-- Aider polyglot leaderboard (aider.chat) — edit-success rate across languages
-- LiveBench (coding category) — resists benchmark contamination via fresh problems
-- BigCodeBench
-- LMArena / Chatbot Arena — "Coding" category leaderboard
+- Aider polyglot, LiveBench (coding), BigCodeBench, LMArena Coding
 
-## Kotlin / JVM specific
-- **[Android Bench](https://developer.android.com/bench) — check this first.** Google's own
-  benchmark for Android-specific development tasks (100 test cases grounded in Android best
-  practices), reported as a leaderboard with Score (%), a CI range, avg latency, and avg cost
-  per full run — averaged over 5 runs per model, so the CI range is a genuine statistical
-  reliability figure, not a single noisy sample. Its leaderboard already covers several vendor
-  families that OpenCode Go hosts (Qwen, Kimi, DeepSeek, GLM, MiniMax, Gemma, Mimo), plus every
-  major closed model, so it's usually possible to place an OpenCode Go model's underlying family
-  directly on this leaderboard even when the exact OpenCode-labeled version isn't listed. Also
-  check `/bench/archive` if the model you're after isn't on the current leaderboard (it may have
-  aged off) and `/bench/methodology` if you need to judge whether a score is comparable to
-  another benchmark's.
-- Per-language breakdowns on the Aider polyglot leaderboard, if Kotlin is included
-- Any Kotlin-specific eval mentioned in recent model release blog posts or papers
-  (JetBrains has published Kotlin-specific benchmarks in the past — worth searching by name)
-- If nothing Kotlin/Android-specific turns up even after checking Android Bench, fall back to
-  Java/general JVM-language results as the closest proxy, and say so explicitly rather than
-  silently substituting general coding scores
+## Kotlin / Android
+- **[Android Bench](https://developer.android.com/bench) — check first.** Google's Android dev benchmark; covers most OpenCode Go vendor families (Qwen, Kimi, DeepSeek, GLM, etc.) so underlying-family scores usually exist even when the exact OpenCode label doesn't. 5 runs/model with a CI range. Also check `/bench/archive` (older results) and `/bench/methodology` (comparability).
+- Per-language breakdowns on the Aider polyglot leaderboard
+- Kotlin-specific evals from recent release notes / papers (JetBrains has published some)
+- If nothing Kotlin/Android-specific turns up, fall back to Java/general JVM-language results as the closest proxy and say so explicitly.
 
 ## Reasoning
-- GPQA Diamond
-- MMLU-Pro
-- ARC-AGI (if the model has a reported score — most don't)
-- Vendor's own reported reasoning benchmark, cross-checked against at least one independent
-  source since vendor-reported numbers alone are not reliable
+- GPQA Diamond, MMLU-Pro
+- ARC-AGI (rarely reported)
+- Vendor-reported reasoning benchmarks (cross-check against an independent source)
 
 ## Agentic / multi-step tool-use
-- SWE-bench (Verified) — real GitHub issue resolution
-- Terminal-Bench
-- Any "agentic coding" leaderboard or blog comparison that specifically tests multi-turn
-  tool-calling loops rather than single-shot generation
+- SWE-bench (Verified), Terminal-Bench
+- Any "agentic coding" leaderboard or write-up testing multi-turn tool-calling loops
 
 ## Mapping OpenCode Go labels to underlying models
-OpenCode Go often uses its own naming for hosted versions of known open models. When exact-name
-benchmark coverage is thin, search the underlying family/vendor instead:
+
+OpenCode Go often uses its own labels for hosted versions of known open models. When exact-name coverage is thin, search the underlying family:
+
 - `GLM-*` → Zhipu AI
 - `Kimi *` → Moonshot AI
 - `Qwen*` → Alibaba
 - `DeepSeek *` → DeepSeek
 - `Grok *` → xAI
 - `MiniMax *` → MiniMax
-- `Hy*` → likely Tencent Hunyuan (verify — naming is not confirmed)
-- `MiMo-*` → likely Xiaomi (verify — naming is not confirmed)
-- `GPT *` → OpenAI, if OpenCode is hosting an OpenAI model under this program
+- `Hy*` → likely Tencent Hunyuan (verify)
+- `MiMo-*` → likely Xiaomi (verify)
+- `GPT *` → OpenAI, if OpenCode is hosting one under this program
 
-This mapping can go stale as OpenCode adds models under new names — if a prefix isn't listed
-here, search the exact name first; if that turns up nothing, try dropping version numbers/suffixes
-and searching again before concluding there's no benchmark data.
+This mapping can go stale. If a prefix isn't listed, search the exact name first; if that turns up nothing, try dropping version numbers/suffixes before concluding there's no data.
